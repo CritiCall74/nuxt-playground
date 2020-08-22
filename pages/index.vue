@@ -1,6 +1,6 @@
 <template>
     <div>
-      <nuxt-content class="page" :document="page"></nuxt-content>
+      <nuxt-content class="page" :document="homeHeader"></nuxt-content>
 
       <section class="experiences">
           <Experience :experience="experience" v-for="experience in experiences" :key="experience.title"></Experience>
@@ -14,10 +14,10 @@ export default {
 
   async asyncData({$content}) {
     const experiences = await $content('experiences').sortBy('start', 'desc').fetch()
-    const page = await $content('home').fetch()
+    const homeHeader = await $content('home').fetch()
 
     return {
-      experiences, page
+      experiences, homeHeader
     }
   }
 }

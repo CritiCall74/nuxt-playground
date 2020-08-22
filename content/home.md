@@ -10,4 +10,4 @@ Ici je peux mettre un peu de texte
 Je suis 
 * en Suisse
 * Formateur d'apprentis
-* Mobile!
+* Mobile !
